@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+/*----------HEADER-----------*/
+.header_container{
+    position: relative;
+    background-image: url("/images/ya.jpg");
+    margin: 0 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    background-color: transparent;
+
+}
+
+header h1
+{
+    position:absolute;
+    bottom:110px;
+    left: 20px;
+    margin-right: 5px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: left;
+}
+
+header img{
+    position: absolute;
+    top:15px;
+    left:15px;
+    width: auto;
+    height: auto;
+    max-width: 26%;
+    max-height: 15%;
+    min-width: 70px;
+    min-height: 50px;
+}
+
+
+.stud_info{
+    position:absolute;
+    bottom:20px;
+    left: 20px;
+}
+
+.stud_info h2{
+    color: #efefef;
+    margin:5px;
+}
+
+.stud_info h2:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+/*----------MAIN-----------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 30vh;
+    padding: 15px;
+    padding-top: 35px;
+    background-color: #ffffff;
+    overflow: auto;
+    margin-bottom: 10px;
+
+
+}
+
+main *{
+    margin: 15px auto;
+}
+
+
+/*images*/
+main img {
+    display: block;
+    max-width: 80%;
+}
+
+.profile_pic{
+    display: none;
+}
+
+.people_pics *{
+    margin: 30px auto 20px;
+}
+
+.people_pics img{
+    width: 75%;
+    height: 15%;
+}
+
+
+
+
+
+
+/*Text*/
+main h1, h2, h3, h4,  p, li{
+    font-size: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: #383838;
+}
+
+main h1{
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+
+main h2{
+    text-align: center;
+    font-size: 29px;
+    font-weight: 1100;
+    margin :54px 5px 20px;
+}
+
+main h3{
+    font-size: 21px;
+    margin-bottom: 0;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+main p{
+    font-size: 19px;
+    padding: 6px;
+    margin: 16px 25px 58px;
+}
+
+main ul{
+     padding: 20px;
+     margin-left: 25px;
+     font-size: large;
+
+ }
+
+.people_pics h2{
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+/*----------SIDEBARS-----------*/
+#left-sidebar {
+    background-image: url("/images/univer2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center left;
+}
+
+#right-sidebar {
+    background-image: url("/images/univer2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center right;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    header {
+        order: 1;
+    }
+    header h1{
+        font-size: 75px;
+        margin-bottom: 8%;
+
+    }
+    .stud_info h2{
+        font-size: 25px;
+    }
+
+
+
+    .main_and_side {
+        order: 2;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main {
+        order: 2;
+        flex: 5;
+    }
+
+    main img{
+        width:65%;
+    }
+
+
+
+    #left-sidebar {
+        order: 1;
+        flex: 1;
+    }
+
+
+    #right-sidebar {
+        order: 3;
+        flex: 1;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    .header_container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        background-image: none;
+        transition: 0.5s;
+    }
+
+    header{
+        position: relative;
+        order:1;
+        flex:1;
+        background-color: #919191;
+    }
+
+
+    header img{
+        margin-top: 2%;
+        margin-left: 40px;
+    }
+
+    .profile_pic{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        order:2;
+        flex:1;
+
+    }
+
+    .stud_info{
+        margin-bottom: 2%;
+        margin-left: 40px;
+
+    }
+
+    .stud_info h2{
+        color: #e1e1e1;
+        font-size: 20px;
+    }
+
+
+    header h1{
+        max-font-size: 90px;
+        margin-bottom: 8%;
+        margin-left: 40px;
+
+    }
+
+
+
+
+    main h2{
+        font-size:32px;
+    }
+
+    main h3{
+        font-size: 24px;
+    }
+
+    main p{
+        font-size: 20px;
+    }
+
+
+
+    .people_pics img{
+        width: 70%;
+    }
+
+    .people_pics h2{
+        font-size: 25px;
+    }
+
+
+
+}
+
